@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Khyati</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+            color: #333;
+        }
+
+        .container {
+            text-align: center;
+            padding: 50px;
+        }
+
+        .header {
+            font-size: 2.5rem;
+            margin-top: 50px;
+        }
+
+        .button {
+            margin-top: 30px;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            background-color: #ff6f61;
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background-color: #d9534f;
+        }
+
+        .section {
+            display: none;
+            padding: 50px 20px;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .timeline {
+            margin: 30px auto;
+            max-width: 600px;
+        }
+
+        .timeline-item {
+            margin: 20px 0;
+        }
+
+        .proposal {
+            font-size: 1.5rem;
+            margin-top: 30px;
+        }
+
+        .ending {
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="home" class="section active">
+            <h1 class="header">For Khyati, the one who makes my world brighter.</h1>
+            <button class="button" onclick="showSection('journey')">Click to Begin the Journey</button>
+        </div>
+
+        <div id="journey" class="section">
+            <h1 class="header">Our Journey</h1>
+            <div class="timeline">
+                <div class="timeline-item">✨ The day we first met was unforgettable.</div>
+                <div class="timeline-item">❤️ Every moment spent with you is special.</div>
+                <div class="timeline-item">🌟 You light up my life in ways I can't explain.</div>
+            </div>
+            <button class="button" onclick="showSection('proposal')">Next</button>
+        </div>
+
+        <div id="proposal" class="section">
+            <h1 class="header">A Special Question</h1>
+            <p class="proposal">Khyati, you are the most amazing person I've ever met. Will you make me the happiest person alive by saying yes?</p>
+            <button class="button" onclick="showSection('ending')">Yes</button>
+        </div>
+
+        <div id="ending" class="section">
+            <h1 class="header">Thank You, Khyati!</h1>
+            <p class="ending">You’ve made my life complete. Here’s to the beginning of our forever. ❤️</p>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
